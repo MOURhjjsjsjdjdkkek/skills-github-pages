@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOUR Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000, #0f2027);
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(0,255,153,0.3);
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      color: #00ff99;
+      font-weight: 700;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00ff99;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      color: #00ff99;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h3 {
+      color: #00ff99;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,255,153,0.2);
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #00ff99;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin: 12px 0;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 10px;
+      color: #00ff99;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(0,255,153,0.3);
+    }
+
+    /* Fade Animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MOUR</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero fade">
+    <h2>Sanusi Muhammad-Awwal</h2>
+    <p>Mechanical Engineering Student | Auto Enthusiast | Digital Creator</p>
+  </div>
+
+  <section id="about" class="fade">
+    <h3>About Me</h3>
+    <div class="card">
+      <p>
+        I am Sanusi Muhammad-Awwal (MOUR), a mechanical engineering student passionate about automobiles, design, and innovation.
+        I am building my skills in engineering and digital content creation with a vision to create my own automotive brand.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="fade">
+    <h3>Skills</h3>
+    <div class="card">
+      <ul>
+        <li>AutoCAD (Advanced)</li>
+        <li>Mechanical Engineering</li>
+        <li>Content Creation</li>
+        <li>Social Media Engagement</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="fade">
+    <h3>Projects</h3>
+    <div class="card">
+      <p>Projects coming soon...</p>
+    </div>
+  </section>
+
+  <section id="contact" class="fade">
+    <h3>Contact</h3>
+    <div class="card">
+      <p>Email: mourwebconnect@gmail.com</p>
+      <p>Phone: 08151168341</p>
+
+      <div class="social">
+        <a href="https://x.com/hour_muham58534" target="_blank">X</a>
+        <a href="https://www.tiktok.com/@muhammadhour" target="_blank">TikTok</a>
+        <a href="https://www.snapchat.com/add/muhammadhour" target="_blank">Snapchat</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 MOUR</p>
+  </footer>
+
+  <script>
+    const fades = document.querySelectorAll('.fade');
+
+    window.addEventListener('scroll', () => {
+      fades.forEach(fade => {
+        const top = fade.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          fade.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
